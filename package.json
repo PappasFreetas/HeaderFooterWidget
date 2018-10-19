@@ -1,9 +1,9 @@
 {
-  "name": "ImageEditor",
-  "version": "1.0.0",
-  "description": "Using FabricJS to manipulate images on a canvas",
+  "name": "CPCHeaderFooter",
+  "version": "1.0.1",
+  "description": "Widget to generate CP Header Footer",
   "license": "Apache 2",
-  "author": "Conner Charlebois",
+  "author": "Nick Pappas",
   "private": true,
   "dependencies": {},
   "devDependencies": {
