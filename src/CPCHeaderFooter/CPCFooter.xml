@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="CPCHeaderFooter.widget.CPCFooter" needsEntityContext="false" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>CPC Footer</name>
+    <description>The description of this widget.</description>
+
+    <icon />
+
+    <properties>
+
+<property key="SaveText" type="string" required="false" defaultValue="">
+ <caption>Placeholder property</caption>
+ <category>Placeholder</category>
+ <description>This quite literally serves no purpose</description>
+</property>
+
+    </properties>
+</widget>
