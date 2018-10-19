@@ -14,10 +14,6 @@ define([
     "dojo/text",
     "dojo/html",
     "dojo/_base/event",
-    //"ImageEditor/lib/fabric",
-    //"ImageEditor/lib/canvas-to-blob",
-
-
     "dojo/text!CPCHeaderFooter/widget/template/CPCHeader.html"
 ], function(declare, _WidgetBase, _TemplatedMixin, dom, dojoDom, dojoProp, dojoGeometry, dojoClass, dojoStyle, 
     dojoConstruct, dojoArray, lang, dojoText, dojoHtml, dojoEvent, widgetTemplate) {
@@ -31,26 +27,6 @@ define([
 
         templateString: widgetTemplate,
 
-        // nodes
-        canvasNode: null,
-        widgetBase: null,
-        addTextButtonNode: null,
-        addArrowButtonNode: null,
-        saveButtonNode: null,
-        deleteButtonNode: null,
-        increaseFontButtonNode: null,
-        makeBlueButton7Node: null,
-        textFontSizeNode: null,
-        fontFamilyNode: null,
-
-        //modeler variables
-        canvasHeight: 500,
-        canvasWidth: 900,
-        imAttribute: null,
-        imageMapping: null, // {imKey: string, imImage: image}
-        pathToParent: null,
-        onUploadComplete: null,
-
         // Internal variables.
         _handles: null,
         _contextObj: null,
@@ -61,51 +37,16 @@ define([
 
         postCreate: function() {
             logger.debug(this.id + ".postCreate");
-
-           // this.canvas = new fabric.Canvas(this.canvasNode);
-
-
-
-            // fabric.Image.fromURL('/img/MyFirstModule$_16_base_back.png', function (oImg) {
-            //     this.canvas.add(oImg);
-            // }.bind(this));
-
-
-            // _setupEvents contains the logic for loading the scripts
-
-
-            //this._setupEvents();
-
-
-
-
-            //this.saveButtonNode.innerText = this.SaveText;
-           // this.cancelButtonNode.innerText = this.CancelText;
-           // this.addTextButtonNode.innerText = this.AddTextText;
-           // this.addArrowButtonNode.innerText = this.AddArrowText;
-           // this.deleteButtonNode.innerText = this.RemoveItemText;
-           // this.annotateTextNode.innerText = this.AnnotateOptionsText;
-           // this.ColorTextNode.innerText = this.ColorText;
-           // this.FontSizeTextNode.innerText = this.FontSizeText;
-
             },
 
         update: function(obj, callback) {
             logger.debug(this.id + ".update");
-
-            /* not sure if anything needs to be called in update
-             * Going to try putting setup events in postCreate then here to see if there is a difference
-             */
-
             this._contextObj = obj;
             this._updateRendering(callback);
         },
-        
 
         resize: function(box) {
             logger.debug(this.id + ".resize");
-            // this._resizeCanvas(); // could resize to window?
-            //this._updateRendering();
         },
 
         uninitialize: function() {
@@ -114,8 +55,6 @@ define([
 
         _updateRendering: function(callback) {
             logger.debug(this.id + "._updateRendering");
-            //this._resizeCanvas();
-            //this._drawCanvasBackground();
             this._executeCallback(callback, "_updateRendering");
         },
 
@@ -158,13 +97,11 @@ define([
             this._loadScript("https://canadapost.ca/cwc/components/assets/scripts/cwc.js", "cwc");
 
         },
-        /* 
-         * This loadScript function will load the external js file asynchronously without neededing jQuery and 
-         * is updated to ES6 standards
-         */
+         
+         // This loadScript function will load the external js file asynchronously without neededing jQuery 
          _loadScript: function(source, name) {
 
-            // TODO - loadScript js logic here
+            // DON'T NEED THE LOADSCRIPT FUNCTIONALITY IN THIS WIDGET - IT EXISTS IN THE FOOTER
 
             // logging callback if the script was loaded successfully
             logger.debug(this.id + "._loadScript loaded: " + name);
