@@ -123,7 +123,6 @@ define([
                     if (!isAbort) {
                         // logging callback if the script was loaded successfully
                         logger.debug("_loadScript loaded: " + name);
-                        count += 1;
                     
                      }
                 }
